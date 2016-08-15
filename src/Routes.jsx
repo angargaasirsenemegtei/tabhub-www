@@ -1,15 +1,16 @@
 import React from 'react';
 import {Route, IndexRoute} from 'react-router'
 
-import App from './components/App'
-import About from './components/About'
-import Guests from './components/Guests'
+import Tabhub       from './components/Tabhub'
+import Users        from './components/Users'
+import Institutions from './components/Institutions'
 
-export default(store) => {
-	return (
-		<Route path="/" component={App} guestStore={store}>
-			<IndexRoute component={About}/>
-			<Route path="guests" component={Guests} guestStore={store}/>
-		</Route>
-	)
+export default() => {
+  return (
+    <Route path="/" component={Tabhub}>
+      <IndexRoute component={Tabhub}/>
+      <Route path="users" component={Users}/>
+      <Route path="institutions" component={Institutions}/>
+    </Route>
+  )
 }

@@ -21,3 +21,8 @@ Or build it
 ```
 > $ npm run build
 ```
+
+### Test
+```
+> $ npm run scan_packages
+```
